@@ -150,3 +150,17 @@ This privacy policy template is provided as-is for use by Kiri Store and its ser
 
 **Last Updated:** April 9, 2026  
 **Status:** ✅ Ready for Google Play Store Submission
+
+---
+
+## Contributing
+
+Contributions are welcome! Please review [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and development process.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Developed and maintained by **[Krishna Patil](https://github.com/kriss2012)**.
