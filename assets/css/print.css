@@ -1,0 +1,181 @@
+/**
+ * Kiri Store - Privacy & Trust Center
+ * Print Stylesheet for Paper and PDF Export
+ */
+
+@media print {
+  /* Reset background and text colors for high-contrast crisp printing */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 2cm 1.5cm;
+    size: A4 portrait;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Hide interactive & non-content UI elements */
+  .site-header,
+  .hero-section,
+  .highlights-section,
+  .rights-section,
+  .document-toolbar-wrap,
+  .sidebar-sticky-wrap,
+  .mobile-toc-bar,
+  .anchor-copy-btn,
+  .faq-chevron,
+  .contact-card-actions,
+  .toast-container,
+  .back-to-top-btn,
+  .mobile-nav-backdrop,
+  .mobile-nav-drawer,
+  .skip-link,
+  .search-box-wrap,
+  .doc-actions-group {
+    display: none !important;
+  }
+
+  /* Ensure two-column layout expands to full width in print */
+  .policy-doc-layout {
+    display: block !important;
+  }
+
+  .policy-content-article {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Document Print Header */
+  .print-only-header {
+    display: block !important;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2pt solid #000000;
+  }
+
+  .print-only-header h1 {
+    font-size: 22pt;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .print-only-header p {
+    font-size: 10pt;
+    color: #444444 !important;
+  }
+
+  /* Section Styling */
+  .policy-section {
+    border: none !important;
+    padding: 0 0 1.5rem 0 !important;
+    margin-bottom: 1.5rem !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .policy-section-header {
+    border-bottom: 1pt solid #cccccc !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .policy-section-num-badge {
+    border: 1pt solid #000000 !important;
+    font-size: 9pt;
+    padding: 0.1rem 0.4rem;
+  }
+
+  .policy-section-title {
+    font-size: 14pt !important;
+    font-weight: bold !important;
+  }
+
+  .policy-subsection-title {
+    font-size: 12pt !important;
+    font-weight: bold !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Callouts & Notes */
+  .policy-callout,
+  .legal-review-flag,
+  .compliance-notice-box {
+    border: 1pt solid #999999 !important;
+    background-color: #f5f5f5 !important;
+    padding: 0.75rem 1rem !important;
+    margin: 1rem 0 !important;
+    break-inside: avoid;
+  }
+
+  /* Print link destination */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    font-weight: normal;
+  }
+
+  a[href^="mailto:"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+  }
+
+  /* Expand all FAQ items in print */
+  .faq-section {
+    display: block !important;
+    padding: 1.5rem 0 !important;
+    border-top: 1pt solid #cccccc !important;
+  }
+
+  .faq-item {
+    border: 1pt solid #cccccc !important;
+    margin-bottom: 0.75rem !important;
+    break-inside: avoid;
+  }
+
+  .faq-item .faq-answer {
+    display: block !important;
+  }
+
+  /* Contact section in print */
+  .contact-section {
+    display: block !important;
+    padding: 1.5rem 0 !important;
+    border-top: 1pt solid #cccccc !important;
+    break-inside: avoid;
+  }
+
+  .contact-card-container {
+    border: 1pt solid #000000 !important;
+  }
+
+  .contact-card-header {
+    background: #eeeeee !important;
+    color: #000000 !important;
+    border-bottom: 1pt solid #000000;
+  }
+
+  .contact-card-title {
+    color: #000000 !important;
+  }
+
+  .site-footer {
+    display: block !important;
+    background: transparent !important;
+    border-top: 1pt solid #000000 !important;
+    padding: 1rem 0 !important;
+    font-size: 9pt;
+  }
+}
