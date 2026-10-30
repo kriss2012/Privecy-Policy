@@ -13,7 +13,7 @@
   --bg-surface: #ffffff;
   --bg-surface-alt: #f1f5f9;
   --bg-surface-elevated: #ffffff;
-  --bg-header: rgba(255, 255, 255, 0.88);
+  --bg-header: rgba(255, 255, 255, 0.92);
   --bg-subtle: #f8fafc;
 
   /* Deep Navy Foundations (Hero & Accents) */
@@ -77,14 +77,14 @@
   --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.09), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
   --shadow-glow: 0 0 35px -5px rgba(37, 99, 235, 0.25);
 
-  /* Spacing */
-  --container-max-width: 1280px;
-  --reading-max-width: 820px;
-  --header-height: 72px;
+  /* Page & Layout Sizing */
+  --container-max-width: 1440px;
+  --reading-max-width: 860px;
+  --header-height: 70px;
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 18px;
   --radius-full: 9999px;
 
   /* Transitions */
