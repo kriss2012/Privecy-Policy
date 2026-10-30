@@ -1,8 +1,11 @@
 const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '..');
+const htmlPath = path.join(rootDir, 'privacy-policy.html');
+const html = fs.readFileSync(htmlPath, 'utf8');
 
 console.log('Testing Feature Implementations...');
-
-const html = fs.readFileSync('privacy-policy.html', 'utf8');
 
 // 1. Check Hero Section
 const hasHeroHeading = html.includes('Your Privacy.') && html.includes('Our Responsibility.');

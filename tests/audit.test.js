@@ -1,12 +1,16 @@
 const fs = require('fs');
+const path = require('path');
 
-function checkFile(path) {
-  if (!fs.existsSync(path)) {
-    console.error('File missing:', path);
+const rootDir = path.resolve(__dirname, '..');
+
+function checkFile(relPath) {
+  const fullPath = path.join(rootDir, relPath);
+  if (!fs.existsSync(fullPath)) {
+    console.error('File missing:', fullPath);
     process.exit(1);
   }
-  const stats = fs.statSync(path);
-  console.log('OK:', path, '(' + stats.size + ' bytes)');
+  const stats = fs.statSync(fullPath);
+  console.log('OK:', relPath, '(' + stats.size + ' bytes)');
 }
 
 checkFile('privacy-policy.html');
@@ -19,7 +23,8 @@ checkFile('assets/css/print.css');
 checkFile('assets/js/privacy-center.js');
 
 // Check that all anchor links in privacy-policy.html point to existing IDs
-const html = fs.readFileSync('privacy-policy.html', 'utf8');
+const htmlPath = path.join(rootDir, 'privacy-policy.html');
+const html = fs.readFileSync(htmlPath, 'utf8');
 const idRegex = /id="([^"]+)"/g;
 const hrefRegex = /href="#([^"]+)"/g;
 
